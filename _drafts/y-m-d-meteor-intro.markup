@@ -1,0 +1,9 @@
+---
+layout: post
+category : tutorial
+tagline: "Capitulo 1"
+tags : [intro, beginner, meteor, tutorial]
+---
+{% include JB/setup %}
+
+texto
