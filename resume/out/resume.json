@@ -1,0 +1,156 @@
+{
+  "name": "Guillermo García Castillo",
+  "meta": {
+    "format": "FRESH@0.3.0",
+    "version": "0.1.0"
+  },
+  "info": {
+    "label": "Developer",
+    "brief": "A brief description of yourself as a candidate, with or without **Markdown** and/or <strong>HTML</strong> formatting.",
+    "image": ""
+  },
+  "contact": {
+    "phone": "+34 654 257 052",
+    "email": "ggarcast@gmail.com",
+    "other": []
+  },
+  "location": {
+    "address": "C/ Alberto Fernandez 4",
+    "city": "Fuengirola",
+    "region": "Málaga",
+    "code": "29640",
+    "country": "ES"
+  },
+  "social": [
+    {
+      "label": "",
+      "network": "GitHub",
+      "user": "Fenicio",
+      "url": "https://github.com/Fenicio"
+    }
+  ],
+  "employment": {
+    "summary": "",
+    "history": [
+      {
+        "employer": "Sistemas de Seguridad 8x8 S.L.",
+        "url": "http://www.seguridad8x8.com",
+        "position": "Developer",
+        "summary": "Developer of internal applications and computer support.",
+        "start": "2012-03",
+        "keywords": [],
+        "highlights": [
+          "Development of internal CRM system in PHP and AngularJS.",
+          "Development of Budget application in Java Swing Desktop and Android.",
+          "Development of documentation generator in Java Swing.",
+          "Development of Web Worker for documentation communication and generation in Java Swing",
+          "Development of Custom Dynamic DNS Server"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "summary": "Optional overall education summary. Not used in most themes.",
+    "level": "degree",
+    "degree": "Technical Engineer",
+    "history": [
+      {
+        "institution": "Universidad de Málaga",
+        "url": "http://www.uma.es",
+        "start": "2007",
+        "end": "2015",
+        "grade": "",
+        "summary": "Technical Engineering in Computer Management",
+        "curriculum": []
+      },
+      {
+        "institution": "IES Las Lagunas. Mijas (Málaga)",
+        "url": "http://ieslaslagunas.es/",
+        "start": "2004",
+        "end": "2006",
+        "grade": "",
+        "summary": "Advanced Technician in Software Development",
+        "curriculum": []
+      }
+    ]
+  },
+  "skills": {
+    "sets": [
+      {
+        "name": "Web Development",
+        "level": "advanced",
+        "skills": [
+          "LAMP",
+          "JavaScript",
+          "HTML 5",
+          "Angular.js",
+          "jQuery",
+          "Sass",
+          "LESS"
+        ]
+      },
+      {
+        "name": "Desktop & Mobile Development",
+        "level": "advanced",
+        "skills": [
+          "Java",
+          "Android",
+          "Python",
+          "SQL",
+          "C++",
+          "C",
+          "Reverse Engineering"
+        ]
+      },
+      {
+        "name": "Server Configuration",
+        "level": "advanced",
+        "skills": [
+          "Unix",
+          "ProFTPd",
+          "Bash"
+        ]
+      },
+      {
+        "name": "Computer Support",
+        "level": "intermediate",
+        "skills": [
+          "Email configuration and Debugging",
+          "Costumer service",
+          "PC Configuration"
+        ]
+      }
+    ],
+    "list": []
+  },
+  "samples": [
+    {
+      "title": "Work Sample",
+      "summary": "Description or summary of the work sample.",
+      "url": "http://project-repo.com",
+      "date": "2015"
+    }
+  ],
+  "writing": [
+    {
+      "title": "",
+      "flavor": "",
+      "date": "",
+      "publisher": {
+        "name": "",
+        "url": ""
+      },
+      "url": ""
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "level": "native"
+    },
+    {
+      "language": "English",
+      "level": "advanced"
+    }
+  ]
+}
