@@ -9,7 +9,7 @@ highlighter: pygments
 # so be sure to set them if your theme uses them.
 #
 title : Fenicio
-tagline: Site Tagline
+tagline: This a stub webpage
 author :
   name : Name Lastname
   email : blah@email.test
