@@ -14,5 +14,7 @@ export default defineConfig({
       rehypePlugins: [rehypeSlug, rehypeHighlight],
     }),
     react(),
+    
   ],
+  base: '/'
 })
