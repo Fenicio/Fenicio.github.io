@@ -1,0 +1,62 @@
+---
+title: Getting Started with React
+date: '2024-01-15'
+tags: ['React', 'Web Development', 'JavaScript']
+excerpt: Best practices and patterns for building scalable React applications
+author: Guiom de la Vega
+image: https://images.unsplash.com/photo-1507238691740-187a5b1d37b8
+---
+
+# Getting Started with React
+
+React is a powerful library for building user interfaces. In this post, we'll explore best practices and patterns for building scalable React applications.
+
+## Why React?
+
+React's component-based architecture makes it easy to build and maintain large applications. Here are some key benefits:
+
+- **Component Reusability**: Build once, use everywhere
+- **Virtual DOM**: Efficient updates and rendering
+- **Rich Ecosystem**: Vast library of tools and packages
+- **Strong Community**: Active development and support
+
+## Getting Started
+
+First, create a new React project using Vite:
+
+```bash
+npm create vite@latest my-react-app -- --template react-ts
+cd my-react-app
+npm install
+```
+
+## Best Practices
+
+### 1. Use Functional Components
+
+```jsx
+// Good
+const MyComponent = ({ name }) => {
+  return <div>Hello, {name}!</div>;
+};
+
+// Avoid
+class MyComponent extends React.Component {
+  render() {
+    return <div>Hello, {this.props.name}!</div>;
+  }
+}
+```
+
+### 2. Proper State Management
+
+```jsx
+const [count, setCount] = useState(0);
+
+// Use updater function for state that depends on previous value
+setCount(prevCount => prevCount + 1);
+```
+
+## Conclusion
+
+React continues to evolve and improve, making it an excellent choice for modern web development. Stay tuned for more advanced topics in future posts!
