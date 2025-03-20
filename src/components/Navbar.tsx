@@ -33,10 +33,6 @@ const NAV_ITEMS: Array<NavItem> = [
     href: '#projects',
   },
   {
-    label: 'Blog',
-    href: '#blog',
-  },
-  {
     label: 'Contact',
     href: '#contact',
   },
@@ -48,23 +44,11 @@ export default function Navbar() {
   const location = useLocation();
 
   const handleClick = (href: string) => {
-    const isOnBlogPost = location.pathname.startsWith('/blog/');
-    if (isOnBlogPost) {
+    if (location.pathname !== '/') {
       navigate('/' + href);
-      // Add a small delay to allow for navigation before scrolling
-      setTimeout(() => {
-        const element = document.getElementById(href.substring(1));
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
     } else {
-      const element = document.getElementById(href.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-      // Update URL without page reload
-      window.history.pushState({}, '', href);
+      const element = document.querySelector(href);
+      element?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -83,7 +67,7 @@ export default function Navbar() {
   };
 
   return (
-    <Box>
+    <Box width="100%">
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
@@ -94,6 +78,7 @@ export default function Navbar() {
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
         align={'center'}
+        justify={'center'}
         position="fixed"
         top={0}
         left={0}
@@ -103,7 +88,8 @@ export default function Navbar() {
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}>
+          display={{ base: 'flex', md: 'none' }}
+        >
           <IconButton
             onClick={onToggle}
             icon={
@@ -113,7 +99,11 @@ export default function Navbar() {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+        <Flex 
+          justify={'center'} 
+          maxW="6xl" 
+          width="100%"
+        >
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
@@ -121,12 +111,9 @@ export default function Navbar() {
             cursor="pointer"
             onClick={handleHomeClick}
           >
-            Guiom de la Vega
+            Guillermo G C
           </Text>
-
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-            <DesktopNav handleClick={handleClick} />
-          </Flex>
+          <DesktopNav handleClick={handleClick} />
         </Flex>
       </Flex>
 
@@ -168,7 +155,8 @@ const MobileNav = ({ handleClick }: { handleClick: (href: string) => void }) => 
     <Stack
       bg={useColorModeValue('white', 'gray.800')}
       p={4}
-      display={{ md: 'none' }}>
+      display={{ md: 'none' }}
+    >
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} onClick={handleClick} />
       ))}
@@ -187,11 +175,13 @@ const MobileNavItem = ({ label, href, onClick }: NavItem & { onClick: (href: str
         align={'center'}
         _hover={{
           textDecoration: 'none',
-        }}>
+        }}
+      >
         <Text
           fontWeight={600}
           color={useColorModeValue('gray.600', 'gray.200')}
-          onClick={() => onClick(href)}>
+          onClick={() => onClick(href)}
+        >
           {label}
         </Text>
       </Flex>

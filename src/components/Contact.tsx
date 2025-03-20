@@ -23,7 +23,7 @@ import {
   MdLocationOn,
   MdOutlineEmail,
 } from 'react-icons/md';
-import { BsGithub, BsLinkedin, BsTwitter, BsPerson } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsPerson } from 'react-icons/bs';
 
 export default function Contact() {
   return (
@@ -62,30 +62,26 @@ export default function Contact() {
                     spacing={5}
                     px={5}
                     alignItems="flex-start">
-                    <IconButton
-                      aria-label="github"
-                      variant="ghost"
-                      size="lg"
-                      isRound={true}
-                      _hover={{ bg: 'brand.500', color: 'white' }}
-                      icon={<BsGithub size="28px" />}
-                    />
-                    <IconButton
-                      aria-label="linkedin"
-                      variant="ghost"
-                      size="lg"
-                      isRound={true}
+                    <a href="https://github.com/Fenicio" target='_blank' rel="noopener noreferrer">
+                      <IconButton
+                        aria-label="github"
+                        variant="ghost"
+                        size="lg"
+                        isRound={true}
+                        _hover={{ bg: 'brand.500', color: 'white' }}
+                        icon={<BsGithub size="28px" />}
+                      />
+                    </a>
+                    <a href="https://linkedin.com/in/guillaume-guiom" target='_blank' rel="noopener noreferrer">
+                      <IconButton
+                        aria-label="linkedin"
+                        variant="ghost"
+                        size="lg"
+                        isRound={true}
                       _hover={{ bg: 'brand.500', color: 'white' }}
                       icon={<BsLinkedin size="28px" />}
                     />
-                    <IconButton
-                      aria-label="twitter"
-                      variant="ghost"
-                      size="lg"
-                      isRound={true}
-                      _hover={{ bg: 'brand.500', color: 'white' }}
-                      icon={<BsTwitter size="28px" />}
-                    />
+                    </a>
                   </HStack>
                 </Box>
               </WrapItem>

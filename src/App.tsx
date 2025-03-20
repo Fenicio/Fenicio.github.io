@@ -1,10 +1,8 @@
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme, Box } from '@chakra-ui/react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import About from './components/About'
 import Projects from './components/Projects'
-import Blog from './components/Blog'
-import BlogPost from './components/BlogPost'
 import Contact from './components/Contact'
 
 const colors = {
@@ -28,22 +26,18 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={
-            <>
-              <About />
-              <Projects />
-              <Blog />
-              <Contact />
-            </>
-          } />
-          <Route path="/blog/:slug" element={
-            <>
-              <BlogPost />
-            </>
-          } />
-        </Routes>
+        <Box width="100%" display="flex" flexDirection="column" alignItems="center">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={
+              <Box width="100%" display="flex" flexDirection="column" alignItems="center">
+                <About />
+                <Projects />
+                <Contact />
+              </Box>
+            } />
+          </Routes>
+        </Box>
       </Router>
     </ChakraProvider>
   )

@@ -9,10 +9,20 @@ import {
   StackDivider,
   Icon,
   useColorModeValue,
+  Box,
+  Button,
+  Link,
 } from '@chakra-ui/react';
-import { IoLogoBitbucket, IoGameController, IoSparkles } from 'react-icons/io5';
+import { IoLogoBitbucket, IoGameController, IoSparkles, IoLeaf } from 'react-icons/io5';
+import { ReactElement } from 'react';
 
-const Feature = ({ text, icon, iconBg }) => {
+interface FeatureProps {
+  text: string;
+  icon: ReactElement;
+  iconBg: string;
+}
+
+const Feature = ({ text, icon, iconBg }: FeatureProps) => {
   return (
     <Stack direction={'row'} align={'center'}>
       <Flex
@@ -34,25 +44,48 @@ export default function About() {
   return (
     <Container maxW={'5xl'} py={12} id="about">
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-        <Stack spacing={4}>
-          <Text
-            textTransform={'uppercase'}
-            color={'brand.400'}
-            fontWeight={600}
-            fontSize={'sm'}
-            bg={useColorModeValue('brand.50', 'brand.900')}
-            p={2}
-            alignSelf={'flex-start'}
-            rounded={'md'}
+        <Stack spacing={4} alignItems="center">
+          <Box alignSelf="flex-start">
+            <Text
+              textTransform={'uppercase'}
+              color={'brand.400'}
+              fontWeight={600}
+              fontSize={'sm'}
+              bg={useColorModeValue('brand.50', 'brand.900')}
+              p={2}
+              rounded={'md'}
+            >
+              About Me
+            </Text>
+          </Box>
+          <Heading textAlign="center">A passionate fullstack developer</Heading>
+          <Text color={'gray.500'} fontSize={'lg'} textAlign="center">
+            I'm a software engineer passionate about creating elegant solutions to complex problems.
+          </Text>
+          <Box
+            p={5}
+            shadow={'md'}
+            borderWidth={'1px'}
+            borderRadius={'lg'}
+            bg={useColorModeValue('white', 'gray.800')}
+            w="full"
+            maxW="md"
           >
-            About Me
-          </Text>
-          <Heading>A passionate fullstack developer</Heading>
-          <Text color={'gray.500'} fontSize={'lg'}>
-            I specialize in building modern web applications using React and creating
-            engaging game experiences with Godot. My passion for technology extends to
-            exploring the potential of Large Language Models and developing productivity tools.
-          </Text>
+            <Stack spacing={4} alignItems="center">
+              <Stack direction={'row'} align={'center'}>
+                <Icon as={IoLeaf} color={'green.500'} w={6} h={6} />
+                <Text fontWeight={600}>Digital Garden</Text>
+              </Stack>
+              <Text color={'gray.500'} textAlign="center">
+                I've begun cultivating a Digital Garden
+              </Text>
+              <Link href="https://garden.guiom.dev" isExternal>
+                <Button colorScheme="brand" size="md">
+                  Access Digital Garden
+                </Button>
+              </Link>
+            </Stack>
+          </Box>
           <Stack
             spacing={4}
             divider={

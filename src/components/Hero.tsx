@@ -19,12 +19,25 @@ export default function Hero() {
         spacing={{ base: 8, md: 14 }}
         py={{ base: 20, md: 36 }}
       >
+        <Box
+          width={{ base: '150px', md: '200px' }}
+          height={{ base: '150px', md: '200px' }}
+          margin="0 auto"
+          borderRadius="full"
+          overflow="hidden"
+        >
+          <img
+            src="https://avatars.githubusercontent.com/u/3343187?v=4"
+            alt="Guiom's Profile"
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          />
+        </Box>
         <Heading
           fontWeight={600}
           fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
           lineHeight={'110%'}
         >
-          Hi, I'm Guiom de la Vega <br />
+          Hi, I'm Guiom, <br />
           <Text as={'span'} color={'brand.400'}>
             Fullstack Developer
           </Text>
