@@ -72,7 +72,7 @@ export default function Contact() {
                         icon={<BsGithub size="28px" />}
                       />
                     </a>
-                    <a href="https://linkedin.com/in/guillaume-guiom" target='_blank' rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/guillermo-garc%C3%ADa-castillo-63b34b43/" target='_blank' rel="noopener noreferrer">
                       <IconButton
                         aria-label="linkedin"
                         variant="ghost"
