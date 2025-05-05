@@ -38,6 +38,9 @@ const NAV_ITEMS: Array<NavItem> = [
   },
 ];
 
+import { useColorMode } from '@chakra-ui/react';
+import { SunIcon, MoonIcon } from '@chakra-ui/icons';
+
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   const navigate = useNavigate();
@@ -66,8 +69,34 @@ export default function Navbar() {
     }
   };
 
+  const { colorMode, setColorMode } = useColorMode();
+
   return (
     <Box width="100%">
+      {/* Theme Mode Buttons */}
+      <div style={{ height: '13px' }} />
+      <Flex position="fixed" top="12px" right="24px" zIndex={1100} gap={2}>
+        <IconButton
+          aria-label="Light mode"
+          icon={<SunIcon />}
+          isActive={colorMode === 'light'}
+          onClick={() => {
+            setColorMode('light');
+          }}
+          size="sm"
+          variant={colorMode === 'light' ? 'solid' : 'outline'}
+        />
+        <IconButton
+          aria-label="Dark mode"
+          icon={<MoonIcon />}
+          isActive={colorMode === 'dark'}
+          onClick={() => {
+            setColorMode('dark');
+          }}
+          size="sm"
+          variant={colorMode === 'dark' ? 'solid' : 'outline'}
+        />
+      </Flex>
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
