@@ -3,36 +3,48 @@ import { extendTheme, ThemeConfig } from '@chakra-ui/react';
 const theme = extendTheme({
   config: {
     initialColorMode: 'dark',
-    useSystemColorMode: true,
+    useSystemColorMode: false,
   } as ThemeConfig,
   colors: {
-    brand: {
-      50: '#f0f4ff',
-      100: '#d9e4ff',
-      200: '#a6c1ff',
-      300: '#739dff',
-      400: '#407aff',
-      500: '#0d57ff',
-      600: '#0046cc',
-      700: '#003499',
-      800: '#002366',
-      900: '#001133',
+    // Shared semantic tokens
+    ink: {
+      light: '#2e2e2e',   // Deep charcoal (light mode text)
+      dark: '#d1bfa3',    // Warm parchment (dark mode text)
     },
-
+    background: {
+      light: '#f9f6ef',   // Aged parchment
+      dark: '#0a0a0a',    // Deep black
+    },
+    surface: {
+      light: '#f1eee7',   // Fresco/paper tone
+      dark: '#1a1a1a',    // Slightly raised section bg
+    },
+    highlight: '#c0a060', // Aged gold
+    accent: '#5e4b3c',    // Burnt umber
+    danger: '#8e3b3b',    // Deep red
+    gray: {
+      50: '#fcfbf9',
+      100: '#f9f6ef',
+      200: '#f1eee7',
+      300: '#d1bfa3',
+      600: '#6a6a6a',
+      700: '#3f3f3f',
+      800: '#2e2e2e',
+      900: '#0a0a0a',
+    },
   },
   fonts: {
-    heading: 'Inter, sans-serif',
-    body: 'Inter, sans-serif',
+    heading: `'EB Garamond Variable', serif`,
+    body: `'Inter', sans-serif`,
   },
   styles: {
     global: (props: any) => ({
       body: {
-        bg: props.colorMode === 'dark' ? 'gray.900' : 'gray.50',
-        color: undefined,
+        bg: props.colorMode === 'dark' ? 'background.dark' : 'background.light',
+        color: props.colorMode === 'dark' ? 'ink.dark' : 'ink.light',
       },
     }),
   },
 });
-
 
 export default theme;

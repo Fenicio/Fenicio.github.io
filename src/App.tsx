@@ -1,5 +1,7 @@
 import { ChakraProvider, Box } from '@chakra-ui/react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import "@fontsource-variable/eb-garamond";
+import "@fontsource/inter";
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Projects from './components/Projects';

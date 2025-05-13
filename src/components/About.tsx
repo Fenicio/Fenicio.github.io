@@ -36,16 +36,18 @@ export default function About() {
               About Me
             </Text>
           </Box>
-          <Heading textAlign="center">A passionate fullstack developer</Heading>
-          <Text color={useColorModeValue('gray.600', 'gray.500')} fontSize={'lg'} textAlign="center"> 
-            I'm a software engineer passionate about creating elegant solutions to complex problems.
-          </Text>
+          <Heading textAlign="center">Fullstack Developer</Heading>
           <Text color={useColorModeValue('gray.700', 'gray.300')} fontSize={'lg'} textAlign="center">
             Currently employed at <Link href="https://www.version1.com" isExternal>Version1</Link> as a Fullstack Developer.
           </Text>
-          <Text color={useColorModeValue('gray.700', 'gray.300')} fontSize={'lg'} textAlign="center">
-            Here's some other stuff I'm working on:
-          </Text>
+          <Image
+            src="https://avatars.githubusercontent.com/u/3343187?v=4"
+            alt="Guiom's Profile"
+            width="300px"
+            height="300px"
+            borderRadius="full"
+            objectFit="cover"
+          />
           <Box
             p={5}
             shadow={'md'}
